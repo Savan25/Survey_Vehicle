@@ -1,0 +1,20 @@
+MOV P1, #00H	; Configure Port 1 as output
+
+MOV A, #66H
+
+BACK:
+MOV P1, A
+RR A
+ACALL DELAY
+SJMP BACK
+
+DELAY:
+MOV R2, #08h
+H1:
+MOV R3, #0FFh
+H2:
+DJNZ R3, H2
+DJNZ R2, H1
+RET
+
+END
