@@ -1,0 +1,9 @@
+# Assembler debug file for MCU 8051 IDE v1.4.7
+# Used assembler: MCU 8051 IDE
+# Date: 03/06/2019
+01A3B966D42CADA57A0DED6FC2BBB981 "left_shift_test.asm" 
+0 1 0 117 144 254
+0 2 3 195
+0 3 4 229 144
+0 4 6 51
+0 5 7 245 144

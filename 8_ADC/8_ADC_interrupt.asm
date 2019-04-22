@@ -1,0 +1,16 @@
+ORG 0000H
+	LJMP SETUP				;skip ISR code
+
+ORG 0003H					;external interrupt 0 ISR
+	CPL P2.4				; toggle LED
+	RETI
+
+SETUP:
+	MOV IE, #10000001B		;enable external interrupt 0
+	MOV P2, #00H			;configure port 2 as output
+	MOV P3, #0FFH			;configure port 3 is input
+
+LOOP:
+	SJMP LOOP
+
+END
